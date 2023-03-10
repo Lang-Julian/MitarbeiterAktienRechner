@@ -7,17 +7,19 @@ function calculate() {
     const stockPercent = parseFloat(document.getElementById('stockPercent').value) / 100;
     const stockGrowth = parseFloat(document.getElementById('stockGrowth').value) / 100;
     const yearlyDividend = parseFloat(document.getElementById('yearlyDividend').value) / 100;
+    const discountTax = parseFloat(document.getElementById('discountTax').value) / 100;
+    const dividendTax = parseFloat(document.getElementById('dividendTax').value) / 100;
 
     let totalInvestment = 0;
     let totalDividend = 0;
     let stockValue = 0;
 
     for (let i = 1; i <= years; i++) {
-        const investment = salary * stockPercent * (1 + discount);
+        const investment = salary * stockPercent * (1 + discount) * (1 - discountTax);
         totalInvestment += investment;
         stockValue += investment;
         stockValue *= (1 + stockGrowth);
-        dividend = stockValue * yearlyDividend;
+        dividend = (stockValue * yearlyDividend) * (1- dividendTax);
         totalDividend += dividend;
         stockValue += dividend;
         salary *= (1 + growth);
