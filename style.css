@@ -1,0 +1,50 @@
+/* Stil für das Formular */
+form {
+    width: 500px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Stil für die Ergebnisse */
+p {
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+span {
+    font-weight: bold;
+}
+
+h1{
+    text-align: center;
+}

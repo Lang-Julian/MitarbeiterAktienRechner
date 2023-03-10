@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Allianz Aktienrechner</title>
+</head>
+<body>
+<h1>Aktienrechner</h1>
+<form>
+    <label for="years">Anzahl der Jahre:</label>
+    <input type="number" id="years" name="years" min="1" max="50" value="6">
+    <br>
+    <label for="salary">Bruttojahreseinkommen:</label>
+    <input type="number" id="salary" name="salary" min="1" max="1000000" value="65000">
+    €
+    <br>
+    <label for="growth">Jährliches Einkommenswachstum:</label>
+    <input type="number" id="growth" name="growth" min="-50" max="50" step="0.1" value="8">
+    %
+    <br>
+    <label for="stockPercent">Prozentuale Investition in Aktien:</label>
+    <input type="number" id="stockPercent" name="stockPercent" min="1" max="100" value="8.33">
+    %
+    <label for="discount">Rabatt auf Aktien:</label>
+    <input type="number" id="discount" name="discount" min="-50" max="50" step="0.1" value="20">
+    %
+    <br>
+    <label for="yearlyDividend">Durchschnittliche jährliches Dividende:</label>
+    <input type="number" id="yearlyDividend" name="yearlyDividend" min="-50" max="50" step="0.1" value="5.33">
+    %
+    <br>
+    <label for="stockGrowth">Durchschnittliches jährliches Aktienwachstum:</label>
+    <input type="number" id="stockGrowth" name="stockGrowth" min="-50" max="50" step="0.1" value="10">
+    %
+    <br>
+    <button type="button" onclick="calculate()">Berechnen</button>
+</form>
+
+<p>Jährliche Dividende: <span id="dividend"></span></p>
+<p>Aktienwert nach <span id="numYears"></span> Jahren: <span id="stockValue"></span></p>
+<p>Dividende Insgesammt <span id="totalDividend"></span></p>
+<p>Gesamtvermögen <span id="total"></span></p>
+
+
+</body>
+</html>
